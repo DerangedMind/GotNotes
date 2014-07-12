@@ -102,7 +102,6 @@ main {
 /* MAIN NOTES LIST ------------------------- */
 
 .note-box {
-  float: left;
   width: 58%;
   margin: 5%;
 }
@@ -123,6 +122,12 @@ main {
   .note-box {
     width: 90%;
     margin: 5% auto;
+  }
+}
+
+@media screen and (min-width:550px) {
+  .note-box {
+    float:left;
   }
 }
 
