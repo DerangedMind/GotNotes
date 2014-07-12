@@ -1,6 +1,10 @@
+@font-face {
+  font-family: 'Pictos';
+  src: url('fonts/modernpics.otf');
+}
+
 body {
   background-color: #FBFBFB;
-  margin-top: 50px;
   height: 100%;
   font-family: Tahoma;
 }
@@ -18,37 +22,41 @@ li {
   list-style-type: none;
 }
 
+.pictosh1 {
+  font-family: 'Pictos';
+  font-size: 48px;
+}
+
 /* NAV BAR ----------------------------------------------- */
 
-@media screen and (max-width:549px){
+nav {
+  background-color: #e6e7e8;
+
+  height: 40px;
+  width: 100%;
+
+  box-shadow: 0 0 5px 2px #DBDCDE;
+  padding-bottom: 9px;
+
+  top: 0;
+  left: 0;
+}
+
+@media screen and (max-width:549px), (max-device-width:360px){
+  .pictos {
+    font-family: 'Pictos';
+    font-size: 22px;
+  }
+
   nav {
     position: relative;
-    background-color: #e6e7e8;
-
-    height: 40px;
-    width: 100%;
-
-    box-shadow: 0 0 5px 2px #DBDCDE;
-    padding-bottom: 9px;
-
-    margin-top: -50px;
-    margin-left: -8px;
   }
 }
 
 @media screen and (min-width:550px){
   nav {
     position: fixed;
-    background-color: #e6e7e8;
-
-    height: 40px;
-    width: 100%;
-
-    box-shadow: 0 0 5px 2px #DBDCDE;
-    padding-bottom: 9px;
-
-    top:0;
-    left:0;
+    z-index: 10;
   }
 }
 
@@ -88,7 +96,6 @@ li {
 
 main {
   width: 100%;
-  margin: 0;
   min-height: 100%;
 }
 
@@ -165,6 +172,7 @@ main {
     right: 0;
     height: 100%;
     margin: 0;
+    margin-top: 43px;
     background-color: #DDD;
     box-shadow: 0 0 5px 2px #DDD;
     z-index: 5;
