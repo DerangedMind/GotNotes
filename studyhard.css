@@ -3,10 +3,17 @@
   src: url('fonts/modernpics.otf');
 }
 
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Open Sans'), local('OpenSans'), url('http://themes.googleusercontent.com/static/fonts/opensans/v5/cJZKeOuBrn4kERxqtaUH3T8E0i7KZn-EPnyo3HZu7kw.woff') format('woff');
+}
+
 body {
   background-color: #FBFBFB;
   height: 100%;
-  font-family: Tahoma;
+  font-family: 'Open Sans', Tahoma;
 }
 
 a {
@@ -24,31 +31,77 @@ li {
 
 .pictos {
   font-family: 'Pictos';
-  font-size: 22px;
-}
-
-.pictosh1 {
-  font-family: 'Pictos';
-  font-size: 48px;
 }
 
 /* NAV BAR ----------------------------------------------- */
 
+/* nav bar sits at top (abs or rel depends on window/screen size) */
 nav {
-  height: 40px;
+  height: 49px;
   width: 100%;
-  background-color: #e6e7e8;
   top: 0;
   left: 0;
+
+  background-color: #e6e7e8;
   box-shadow: 0 0 5px 2px #DBDCDE;
-  padding-bottom: 9px;
 
 }
+
+/* home button sits at left */
+.n-home {
+  font-size: 2.25em;
+  color: #636261;
+  float:left;
+  font-weight: 100;
+}
+
+.n-list {
+  list-style: none;
+  margin: 0 2%;
+  vertical-align: baseline;
+  float: right;
+}
+
+@media screen and (max-width:900px) {
+  .n-list {
+    width: 300px;
+   }
+}
+
+@media screen and (min-width:901px) and (max-width:1171px) {
+  .n-list {
+    width: 30%;
+  }
+}
+
+@media screen and (min-width:1172px) {
+  .n-list {
+    width: 350px;
+  }
+}
+
+.n-list li {
+  float: left;
+}
+
+.n-list li a {
+  display: block;
+  margin: 0 10px;
+  color: #2f2f2f;
+  padding: 0 10px;
+}
+
+nav a:hover {
+  background-color: #DBDCDE;
+}
+
 
 @media screen and (max-width:549px), (max-device-width:360px){
   nav {
     position: absolute;
   }
+
+
 }
 
 @media screen and (min-width:550px){
@@ -56,94 +109,8 @@ nav {
     position: fixed;
     z-index: 10;
   }
-}
-
-/* NAV BAR ELEMENTS -------------------- */
-
-.nav-home {
-  float: left;
 
 }
-
-.nav-list {
-  display: inline-block;
-  margin: 0 2%;
-}
-
-.nav-btn {
-  margin: 2%;
-  text-decoration: none;
-  color: #2f2f2f;
-}
-
-.search {
-
-}
-
-/*.nav-home {
-  font-size: 2.25em;
-  font-weight: 100;
-  z-index: 1;
-  color: #2f2f2f;
-  float:left;
-}
-
-.nav-btn {
-  color: #666;
-  text-align: center;
-  font-size: 16px;
-  top: 0;
-}
-
-@media screen and (max-width: 549px), (max-device-width: 360px) {
-
-  .nav-home {
-    display: inline-block;
-    font-size: 1.75em;
-  }
-
-  .nav-list {
-    display: inline-block;
-    margin-left: auto;
-    margin-right: auto;
-  }
-
-  .nav-btn {
-    display: block;
-    margin: 5px 5px;
-  }
-
-  .nav-pic {
-    font-size: 36px;
-  }
-
-  .nav-txt {
-    display: none;
-  }
-}
-
-@media screen and (min-width: 550px) {
-  .nav-home {
-    padding: 2px 17px 4px 17px;
-    border-right: 1px solid #DDD;
-  }
-
-  .nav-btn {
-    float: right;
-  }
-
-  .nav-pic {
-    display: none;
-  }
-}
-
-.nav-btn:hover {
-  background-color: #DBDCDE;
-}
-
-.home:hover {
-  background-color: #DBDCDE;
-}*/
 
 /* MAIN CONTENT ---------------------------- */
 
@@ -156,7 +123,14 @@ main {
 
 .note-box {
   width: 58%;
-  margin: 5%;
+  margin: 5% auto;
+  float: left;
+
+}
+
+.note {
+  display: inline-block;
+  margin: 5px auto;
 }
 
 .note-img {
@@ -165,47 +139,15 @@ main {
   height: auto;
 }
 
-.note {
-  display: inline-block;
-  margin: 5px auto;
-}
-
-/* one column w/o sidebar */
-@media screen and (max-width:549px) {
-  .note-box {
-    width: 90%;
-    margin: 5% auto;
-  }
-}
-
-@media screen and (min-width:550px) {
-  .note-box {
-    float:left;
-  }
-}
-
-/* one column w/ sidebar */
-@media screen and (min-width:550px) and (max-width:783px){
-  .note-box {
-    width: 40%;
-    margin: 5% 10%;
-  }
-
-  .note {
-    width: 90%;
-    height: auto;
-  }
-}
-
 /* two column  */
-@media screen and (min-width:784px) and (max-width:1170px){
+@media screen and (max-width:825px){
   .note {
     width: 45%;
     height: auto;
   }
 }
 /* three column */
-@media screen and (min-width:1171px){
+@media screen and (min-width:826px) and (max-width:1299px){
   .note {
     width: 30%;
     height: auto;
@@ -223,7 +165,7 @@ main {
 /* INFO ASIDE ----------------------------- */
 
 /* side bar when window is minimum size of 550px */
-@media screen and (min-width:550px) {
+@media screen {
   .info {
     position: fixed;
     float: right;
@@ -231,37 +173,34 @@ main {
     height: 100%;
     margin: 0;
     margin-top: 43px;
-    background-color: #DDD;
+    background-color: #DBDCDA;
     box-shadow: 0 0 5px 2px #DDD;
     z-index: 5;
   }
 }
 
-/* ... otherwise hide side bar */
+/* no aside */
 @media screen and (max-width:549px) {
   .info {
-    display: none;
+    width: 0;
   }
 }
 
-/* one column */
-@media screen and (max-width:900px) {
+@media screen and (min-width:550px) and (max-width:900px) {
   .info {
-    width: 300px;
+    width: 270px;
   }
 }
 
-/* two column */
 @media screen and (min-width:901px) and (max-width:1171px) {
   .info {
-    width: 34%;
+    width: 30%;
   }
 }
 
-/* three and column */
 @media screen and (min-width:1172px) {
   .info {
-    width: 400px;
+    width: 350px;
   }
 }
 
@@ -284,8 +223,8 @@ footer {
 
 .signup-box {
   position: relative;
-  width: 360px;
   height: 500px;
+  width: 360px;
   margin-left: auto;
   margin-right: auto;
   background-color: #DBDCDE;
