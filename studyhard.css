@@ -57,9 +57,9 @@ nav {
 
 .n-list {
   list-style: none;
-  margin: 0 2%;
-  vertical-align: baseline;
-  float: right;
+  position: absolute;
+  margin: -8px 0 -8px inherit;
+  right: 0;
 }
 
 @media screen and (max-width:900px) {
