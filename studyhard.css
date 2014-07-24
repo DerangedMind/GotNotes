@@ -70,7 +70,7 @@ nav {
 
 @media screen and (min-width:901px) and (max-width:1171px) {
   .n-list {
-    width: 30%;
+    width: 300px;
   }
 }
 
@@ -122,15 +122,14 @@ main {
 /* MAIN NOTES LIST ------------------------- */
 
 .note-box {
-  width: 58%;
-  margin: 5% auto;
+  width: calc(100% - 270px);
+  margin: 5px auto;
   float: left;
-
 }
 
 .note {
   display: inline-block;
-  margin: 5px auto;
+  margin: 5px;
 }
 
 .note-img {
@@ -139,15 +138,25 @@ main {
   height: auto;
 }
 
-/* two column  */
+
+
+/* two column w/ aisde */
 @media screen and (max-width:825px){
   .note {
     width: 45%;
     height: auto;
   }
 }
+/* two column w/o aside */
+@media screen and (max-width:549px){
+  .note-box {
+    width: calc(100%);
+  }
+}
+
 /* three column */
-@media screen and (min-width:826px) and (max-width:1299px){
+@media screen and (min-width:826px) and (max-width:1171px){
+
   .note {
     width: 30%;
     height: auto;
@@ -155,12 +164,17 @@ main {
 }
 
 /* four column */
-@media screen and (min-width: 1300px) {
+@media screen and (min-width: 1172px) {
+  .note-box {
+    width: calc(100% - 350px);
+  }
   .note {
     width: 22.5%;
     height: auto;
   }
 }
+
+
 
 /* INFO ASIDE ----------------------------- */
 
@@ -186,15 +200,9 @@ main {
   }
 }
 
-@media screen and (min-width:550px) and (max-width:900px) {
+@media screen and (min-width:550px) and (max-width:1171px) {
   .info {
     width: 270px;
-  }
-}
-
-@media screen and (min-width:901px) and (max-width:1171px) {
-  .info {
-    width: 30%;
   }
 }
 
